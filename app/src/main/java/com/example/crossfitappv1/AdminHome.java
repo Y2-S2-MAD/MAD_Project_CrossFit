@@ -3,7 +3,7 @@ package com.example.crossfitappv1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
+//comment comment
 public class AdminHome extends AppCompatActivity {
 
     @Override
