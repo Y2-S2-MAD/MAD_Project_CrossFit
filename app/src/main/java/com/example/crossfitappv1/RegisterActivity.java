@@ -88,7 +88,7 @@ public class RegisterActivity extends AppCompatActivity {
                             userInfo.put("CurWeight",CurWeight.getText().toString());
                             userInfo.put("GoalWeight",GoalWeight.getText().toString());
                             userInfo.put("height",height.getText().toString());
-
+//
                             if (isMale.isChecked()){
                                 userInfo.put("isMale","1");
                             }
