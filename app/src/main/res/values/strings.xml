@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CrossFitAppV1</string>
+    <string name="RegHeader">Create Account</string>
 </resources>

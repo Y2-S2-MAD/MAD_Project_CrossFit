@@ -16,12 +16,12 @@
         tools:context=".Registration">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/RegisterheaderView"
             android:layout_width="310dp"
             android:layout_height="62dp"
             android:foregroundGravity="center"
             android:gravity="center"
-            android:text="Create Account"
+            android:text="@string/RegHeader"
             android:textColor="#FFFFFF"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -33,7 +33,7 @@
             app:layout_constraintVertical_bias="0.082" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageViewLogo"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginTop="12dp"
@@ -41,10 +41,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/RegisterheaderView" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/editTxtRegFullName"
             android:layout_width="259dp"
             android:layout_height="44dp"
             android:layout_marginTop="24dp"
@@ -58,10 +58,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/editTxtEmail"
             android:layout_width="259dp"
             android:layout_height="44dp"
             android:layout_marginTop="16dp"
@@ -75,10 +75,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+            app:layout_constraintTop_toBottomOf="@+id/editTxtRegFullName" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/editTxtPassword"
             android:layout_width="259dp"
             android:layout_height="44dp"
             android:layout_marginTop="16dp"
@@ -92,10 +92,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            app:layout_constraintTop_toBottomOf="@+id/editTxtEmail" />
 
         <EditText
-            android:id="@+id/etDate"
+            android:id="@+id/editTxtDOB"
             android:layout_width="259dp"
             android:layout_height="44dp"
             android:layout_marginTop="16dp"
@@ -109,7 +109,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+            app:layout_constraintTop_toBottomOf="@+id/editTxtPassword"
             tools:ignore="MissingConstraints" />
 
 
@@ -121,9 +121,9 @@
             android:layout_marginLeft="216dp"
             android:layout_marginRight="16dp"
             android:src="@drawable/calender"
-            app:layout_constraintBottom_toBottomOf="@+id/etDate"
-            app:layout_constraintRight_toRightOf="@id/etDate"
-            app:layout_constraintStart_toStartOf="@+id/etDate"
+            app:layout_constraintBottom_toBottomOf="@+id/editTxtDOB"
+            app:layout_constraintRight_toRightOf="@id/editTxtDOB"
+            app:layout_constraintStart_toStartOf="@+id/editTxtDOB"
             app:srcCompat="@drawable/calender"
             tools:ignore="InvalidId,MissingConstraints" />
 
@@ -142,7 +142,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etDate"
+            app:layout_constraintTop_toBottomOf="@+id/editTxtDOB"
             tools:ignore="MissingConstraints" />
 
         <EditText
@@ -193,7 +193,7 @@
             app:layout_constraintTop_toBottomOf="@+id/etHeight">
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/radioBtnMale"
                 android:layout_width="88dp"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/dark_blue"
@@ -201,7 +201,7 @@
                 android:textSize="20dp" />
 
             <RadioButton
-                android:id="@+id/radioButton6"
+                android:id="@+id/radioBtnFemale"
                 android:layout_width="119dp"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/dark_blue"
@@ -211,7 +211,7 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/btnNxt"
+            android:id="@+id/btnSignUp"
             android:layout_width="149dp"
             android:layout_height="46dp"
             android:layout_marginTop="12dp"
@@ -226,7 +226,7 @@
             app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/RegToLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
@@ -238,7 +238,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnNxt" />
+            app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
