@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">CrossFitAppV1</string>
     <string name="RegHeader">Create Account</string>
+    <string name="Puls_Mark">+</string>
+    <string name="Equal_Mark">=</string>
+    <string name="Goal">Goal</string>
+    <string name="Food_top">Food</string>
+    <string name="Exercise_top">Exercise</string>
+    <string name="Remaining">Remaining</string>
 </resources>
