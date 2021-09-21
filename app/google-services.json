@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "96385921151",
+    "firebase_url": "https://crossfit-test-f421e-default-rtdb.firebaseio.com",
+    "project_id": "crossfit-test-f421e",
+    "storage_bucket": "crossfit-test-f421e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:96385921151:android:2403caa1a0262a5dfa0f4a",
+        "android_client_info": {
+          "package_name": "com.example.crossfitappv1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "96385921151-hesdor00hlq3tshpgd0l4frql0h0k7iq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNgMK0JhzIizl3B6LRuRgQcqPZCsVvf3o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "96385921151-hesdor00hlq3tshpgd0l4frql0h0k7iq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
