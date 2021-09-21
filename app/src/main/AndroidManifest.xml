@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.crossfitappv1" >
+    package="com.example.crossfitappv1">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CrossFitAppV1" >
+        android:theme="@style/Theme.CrossFitAppV1">
+        <activity
+            android:name=".AddCategory"
+            android:exported="true" />
+        <activity
+            android:name=".AdminCategory"
+            android:exported="true" />
         <activity
             android:name=".AdminHome"
             android:exported="true" />
@@ -21,7 +27,7 @@
         <activity
             android:name=".HomeActivity"
             android:exported="true" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
