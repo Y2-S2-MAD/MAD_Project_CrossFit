@@ -10,10 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CrossFitAppV1">
         <activity
-            android:name=".AddCategory"
-            android:exported="true" />
-        <activity
-            android:name=".AdminCategory"
+            android:name=".ActivityFoodMain"
             android:exported="true" />
         <activity
             android:name=".AdminHome"
@@ -34,6 +31,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
