@@ -10,46 +10,50 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class ActivityFoodMain extends AppCompatActivity {
+public class ActivityExerciseMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_food_main);
+        setContentView(R.layout.activity_exercise_main);
 
-
-        //Bottom navigation
-        BottomNavigationView btnNav = findViewById(R.id.bottomNAvigationView);
+        //bottom navigation view
+        BottomNavigationView btnNav = findViewById(R.id.Exercise_bottomNavigationviwe);
         btnNav.setOnItemSelectedListener(navListener);
 
-        //Setting Home fragment as main fragment
+        //setting Exercise add Fragment as main fragment
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.fragment_layout,new FragmentAnalize()).commit();
+                .replace(R.id.fragment_layout,new ExerciseAddFragment()).commit();
 
     }
 
     //Listener nav bar
-    private NavigationBarView.OnItemSelectedListener navListener = new BottomNavigationView.OnItemSelectedListener(){
+
+    private NavigationBarView.OnItemSelectedListener navListener = new BottomNavigationView.OnItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment selectedFragment = null;
+
             switch (item.getItemId()){
-                case R.id.item1:
-                    selectedFragment = new FragmentAnalize();
+                case R.id.Exitem1:
+                    selectedFragment = new ExerciseListFragment();
                     break;
-                case R.id.item2:
-                    selectedFragment = new FragmentAdd();
+
+                case R.id.Exitem2:
+                    selectedFragment = new ExerciseAddFragment();
                     break;
-                case R.id.item3:
-                    selectedFragment = new FragmentList();
+
+                case R.id.Exitem3:
+                    selectedFragment = new ExerciseVideoFragment();
                     break;
             }
 
             //begin transaction
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fragment_layout
-                    ,selectedFragment).commit();
+                    .replace(R.id.fragment_layout,selectedFragment).commit();
+
             return true;
+
         }
     };
 }

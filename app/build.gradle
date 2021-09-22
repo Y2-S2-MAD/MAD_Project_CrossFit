@@ -51,6 +51,9 @@ dependencies {
         // Declare the dependencies for the desired Firebase products without specifying versions
         // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
         implementation 'com.google.firebase:firebase-auth'
+
+       
+
         implementation 'com.google.firebase:firebase-firestore'
     //for recycler view
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
@@ -58,6 +61,7 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-database:6.2.1'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
 
     implementation 'com.orhanobut:dialogplus:1.11@aar'
 
