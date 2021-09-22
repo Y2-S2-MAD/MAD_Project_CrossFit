@@ -13,5 +13,19 @@
     
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="carbs" >Carbs</string>
+    <string name="MealName">Meal Name</string>
+    <string name="Protein">Protein</string>
+    <string name="Gram">Gram</string>
+    <string name="fat">Fat</string>
+    <string name="calories">Calories</string>
+    <string name="Weight">Weight</string>
+    <string name="cal">Calories</string>
+    <string name="carb">Carbs</string>
+    <string name="Add">Add</string>
+    <string name="Protiens">Protein</string>
+    <string name="Back">Back</string>
+    <string name="AddFoodHeader">Add Food</string>
+    <string name="fats">Fat</string>
 
 </resources>
