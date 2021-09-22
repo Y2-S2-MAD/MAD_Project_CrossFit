@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CrossFitAppV1">
         <activity
+            android:name=".ActivityExerciseMain"
+            android:exported="true" />
+        <activity
             android:name=".ActivityFoodMain"
             android:exported="true" />
         <activity

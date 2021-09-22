@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Exitem1"
+        android:title="WeekList"
+        android:icon="@drawable/exercise_list_icon"/>
+
+    <item
+        android:id="@+id/Exitem2"
+        android:title="ExerciseAdd"
+        android:icon="@drawable/exercise_add_icon"/>
+
+    <item
+        android:id="@+id/Exitem3"
+        android:title="ExerciseVideo"
+        android:icon="@drawable/exercise_video_icon"/>
+
+</menu>
