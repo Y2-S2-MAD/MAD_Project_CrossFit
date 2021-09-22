@@ -1,6 +1,6 @@
 package com.example.crossfitappv1;
 
-import com.google.firebase.firestore.auth.User;
+
 
 public class Users {
     public String fullname,email,dob,CurWeight,GoalWeight,height,male,female,user;
