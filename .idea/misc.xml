@@ -3,37 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/drawable-v24/tab_corners_shape.xml" value="0.21157407407407408" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/drawable/edit_text_background.xml" value="0.16712962962962963" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/drawable/ic_analytics.xml" value="0.21157407407407408" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/drawable/ic_search.xml" value="0.21203703703703702" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/drawable/rounded.xml" value="0.14212962962962963" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/drawable/tab_corners_shape.xml" value="0.21157407407407408" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_admin_add_food.xml" value="0.264" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_admin_food_main.xml" value="0.264" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_admin_home.xml" value="0.264" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_food_main.xml" value="0.19722222222222222" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_home.xml" value="0.264" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_login.xml" value="0.1381340579710145" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_main.xml" value="0.20945945945945946" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_main2.xml" value="0.20945945945945946" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_register.xml" value="0.264" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/food_row.xml" value="0.2" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/fragment_add.xml" value="0.19722222222222222" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/fragment_analize.xml" value="0.19722222222222222" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/fragment_list.xml" value="0.19722222222222222" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/update_popup.xml" value="0.176" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/menu/menu2.xml" value="0.19722222222222222" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/menu/search.xml" value="0.19768518518518519" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/drawable/edit_text_background.xml" value="0.20925925925925926" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/drawable/exercise_list_icon.xml" value="0.23378378378378378" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.20925925925925926" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/drawable/ic_email_black.xml" value="0.20925925925925926" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.20925925925925926" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/drawable/logout_icon.xml" value="0.23378378378378378" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/drawable/roundbutton.xml" value="0.23378378378378378" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/activity_admin_home.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/activity_exercise_main.xml" value="0.1" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/activity_food_main.xml" value="0.1" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/activity_login.xml" value="0.176" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/activity_main.xml" value="0.152" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/fragment_add.xml" value="0.11261261261261261" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/fragment_analize.xml" value="0.11261261261261261" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/fragment_exercise_add.xml" value="0.176" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/fragment_exercise_list.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/fragment_exercise_video.xml" value="0.11261261261261261" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/header.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/menu/main_menu.xml" value="0.21981981981981982" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/menu/menu2.xml" value="0.11261261261261261" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/menu/menuexercise.xml" value="0.21981981981981982" />
       </map>
     </option>
   </component>
