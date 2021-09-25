@@ -103,7 +103,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         //radiobutton validation
         if( ! (isMale.isChecked() || isFemale.isChecked())){
-            Toast.makeText(RegisterActivity.this,"Select the geneder",Toast.LENGTH_SHORT).show();
+            Toast.makeText(RegisterActivity.this,"Select the gender",Toast.LENGTH_SHORT).show();
             return;
         }
 

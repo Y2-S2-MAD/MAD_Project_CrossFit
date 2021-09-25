@@ -34,6 +34,7 @@ public class AdminFoodMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_admin_food_main);
 
         recyclerView = (RecyclerView) findViewById(R.id.recview);

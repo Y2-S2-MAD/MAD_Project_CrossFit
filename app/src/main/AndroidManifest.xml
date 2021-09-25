@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.crossfitappv1">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,31 +12,50 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CrossFitAppV1">
         <activity
+            android:name=".AddFoodMain"
+            android:exported="true"
+            android:theme="@style/AppTheme.custome">
+        </activity>
+        <activity
+            android:name=".AddFoodCount"
+            android:exported="true"
+            android:theme="@style/AppTheme.custome">
 
-            android:name=".ActivityExerciseMain"
-=======
+        </activity>
+        <activity android:name=".ActivityExerciseMain"
+            android:theme="@style/AppTheme.custome"/>
+        <activity
             android:name=".AdminAddFood"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme.custome"/>
         <activity
             android:name=".AdminFoodMain"
-
-            android:exported="true" />
+            android:exported="true"
+            android:label="Search"
+            />
         <activity
             android:name=".ActivityFoodMain"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme.custome"/>
         <activity
             android:name=".AdminHome"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme.custome"/>
         <activity
             android:name=".RegisterActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme.custome"/>
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/AppTheme.custome"/>
         <activity
             android:name=".HomeActivity"
-            android:exported="true" />
-        <activity android:name=".MainActivity">
+            android:exported="true"
+            android:theme="@style/AppTheme.custome"/>
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.custome">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

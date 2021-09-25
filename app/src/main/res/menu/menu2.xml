@@ -5,10 +5,7 @@
         android:id="@+id/item1"
         android:title="Analize"
         android:icon="@drawable/ic_analytics"/>
-    <item
-        android:id="@+id/item2"
-        android:title="addCircle"
-        android:icon="@drawable/ic_add_circle"/>
+
     <item
         android:id="@+id/item3"
         android:title="List"

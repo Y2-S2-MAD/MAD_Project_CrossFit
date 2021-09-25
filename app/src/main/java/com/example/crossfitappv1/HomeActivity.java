@@ -69,7 +69,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()){
             case R.id.food_card:
-                i = new Intent(this,ActivityFoodMain.class);
+                i = new Intent(this,AddFoodCount.class);
                 startActivity(i);
                 break;
 
