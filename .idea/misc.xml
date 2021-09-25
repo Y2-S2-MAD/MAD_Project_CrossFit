@@ -3,29 +3,46 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/drawable-v24/tab_corners_shape.xml" value="0.21157407407407408" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/drawable/ic_analytics.xml" value="0.21157407407407408" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/drawable/tab_corners_shape.xml" value="0.21157407407407408" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_admin_home.xml" value="0.264" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_food_main.xml" value="0.19722222222222222" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_home.xml" value="0.264" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_login.xml" value="0.1381340579710145" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_main.xml" value="0.20945945945945946" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_main2.xml" value="0.20945945945945946" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/activity_register.xml" value="0.264" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/fragment_add.xml" value="0.19722222222222222" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/fragment_analize.xml" value="0.19722222222222222" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/layout/fragment_list.xml" value="0.19722222222222222" />
-        <entry key="..\:/1 - MY/Year II Sem II/MAD - IT2010/CrossFitAppV3/CrossFitAppV1/app/src/main/res/menu/menu2.xml" value="0.19722222222222222" />
+        <entry key="..\:/SLIIT 2020/2nd yr, 2nd sem/MAD/MAD_Project_CrossFit/app/src/main/res/layout/activity_add_category.xml" value="0.4" />
+        <entry key="..\:/SLIIT 2020/2nd yr, 2nd sem/MAD/MAD_Project_CrossFit/app/src/main/res/layout/activity_admin_category.xml" value="0.1" />
+        <entry key="..\:/SLIIT 2020/2nd yr, 2nd sem/MAD/MAD_Project_CrossFit/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/SLIIT 2020/2nd yr, 2nd sem/MAD/MAD_Project_CrossFit/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/drawable/edit_text_background.xml" value="0.20925925925925926" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.20925925925925926" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/drawable/ic_email_black.xml" value="0.20925925925925926" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.20925925925925926" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/drawable/roundbutton.xml" value="0.23378378378378378" />
-        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/activity_admin_home.xml" value="0.1598731884057971" />
+        <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/activity_home.xml" value="0.4" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/activity_login.xml" value="0.176" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/activity_main.xml" value="0.152" />
         <entry key="..\:/Users/Oshen/AndroidStudioProjects/CrossFitAppV1/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/drawable/edit_text_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/activity_add_category.xml" value="0.264" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/activity_admin_category.xml" value="0.2" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/activity_admin_home.xml" value="0.1" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/activity_category_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/activity_fragment_category.xml" value="0.1" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/activity_main.xml" value="0.13489583333333333" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/activity_update_package.xml" value="0.2" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/activity_user_category.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/activity_user_package_details.xml" value="0.2" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/activity_user_package_details_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/fragment_.xml" value="0.1" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/fragment_add.xml" value="0.13489583333333333" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/fragment_category.xml" value="0.264" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/fragment_category2.xml" value="0.1" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/fragment_category_list.xml" value="0.1" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/fragment_list.xml" value="0.1" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/fragment_package.xml" value="0.2" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/fragment_pkg.xml" value="0.13541666666666666" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/fragment_pkge.xml" value="0.14947916666666666" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/no_data_found.xml" value="0.1" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/package_item_layout.xml" value="0.264" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/user_no_data_found.xml" value="0.1" />
+        <entry key="..\:/Users/RMD HANSINI/Desktop/MAD_Project_CrossFit/app/src/main/res/layout/user_package_item_layout.xml" value="0.264" />
       </map>
     </option>
   </component>

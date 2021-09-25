@@ -10,20 +10,27 @@ import android.view.View;
 public class HomeActivity extends AppCompatActivity {
 
     //comment
-    CardView FoodCard;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        FoodCard = findViewById(R.id.food_card);
 
-        FoodCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this,ActivityFoodMain.class));
-            }
-        });
+
+
+//        card1.setOnClickListener(this);
+
     }
+
+
+//    public void onClick(View v){
+//        if (v.getId() == R.id.package_card) {
+//            getSupportFragmentManager().beginTransaction().replace(R.id.constraint,new PackageFragment()).commit();
+//        }
+//    }
+
 }

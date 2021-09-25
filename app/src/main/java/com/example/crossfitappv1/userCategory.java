@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdminCategory extends AppCompatActivity {
+public class userCategory extends AppCompatActivity {
 
     FloatingActionButton fab;
     private RecyclerView cardio,weight,strength,crossfit;
@@ -38,7 +38,7 @@ public class AdminCategory extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_category);
+        setContentView(R.layout.activity_user_category);
 
         cardio = findViewById(R.id.CardioPackage);
         weight = findViewById(R.id.weightPackage);
@@ -60,7 +60,7 @@ public class AdminCategory extends AppCompatActivity {
         fab = findViewById(R.id.fab);
 
         fab.setOnClickListener((view) -> {
-                startActivity(new Intent(AdminCategory.this,AddCategory.class));
+            startActivity(new Intent(userCategory.this,AddCategory.class));
         });
     }
 
@@ -69,29 +69,29 @@ public class AdminCategory extends AppCompatActivity {
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    list1 = new ArrayList<>();
-                    if (!dataSnapshot.exists()){
-                        CardioNoData.setVisibility(View.VISIBLE);
-                        cardio.setVisibility(View.GONE);
-                    }else {
-                        CardioNoData.setVisibility(View.GONE);
-                        cardio.setVisibility(View.VISIBLE);
+                list1 = new ArrayList<>();
+                if (!dataSnapshot.exists()){
+                    CardioNoData.setVisibility(View.VISIBLE);
+                    cardio.setVisibility(View.GONE);
+                }else {
+                    CardioNoData.setVisibility(View.GONE);
+                    cardio.setVisibility(View.VISIBLE);
 
-                        for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                            categoryData data = snapshot.getValue(categoryData.class);
-                            list1.add(data);
-                        }
-                        cardio.setHasFixedSize(true);
-                        cardio.setLayoutManager(new LinearLayoutManager(AdminCategory.this));
-                        adapter = new PackageAdapter(list1,AdminCategory.this,"Cardio Packages");
-                        cardio.setAdapter(adapter);
-
+                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                        categoryData data = snapshot.getValue(categoryData.class);
+                        list1.add(data);
                     }
+                    cardio.setHasFixedSize(true);
+                    cardio.setLayoutManager(new LinearLayoutManager(userCategory.this));
+                    adapter = new PackageAdapter(list1,userCategory.this,"Cardio Packages");
+                    cardio.setAdapter(adapter);
+
+                }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(AdminCategory.this,databaseError.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(userCategory.this,databaseError.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -115,8 +115,8 @@ public class AdminCategory extends AppCompatActivity {
                         list2.add(data);
                     }
                     weight.setHasFixedSize(true);
-                    weight.setLayoutManager(new LinearLayoutManager(AdminCategory.this));
-                    adapter = new PackageAdapter(list2,AdminCategory.this,"Weight Packages");
+                    weight.setLayoutManager(new LinearLayoutManager(userCategory.this));
+                    adapter = new PackageAdapter(list2,userCategory.this,"Weight Packages");
                     weight.setAdapter(adapter);
 
                 }
@@ -124,7 +124,7 @@ public class AdminCategory extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(AdminCategory.this,databaseError.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(userCategory.this,databaseError.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -148,8 +148,8 @@ public class AdminCategory extends AppCompatActivity {
                         list3.add(data);
                     }
                     strength.setHasFixedSize(true);
-                    strength.setLayoutManager(new LinearLayoutManager(AdminCategory.this));
-                    adapter = new PackageAdapter(list3,AdminCategory.this,"Strength Packages");
+                    strength.setLayoutManager(new LinearLayoutManager(userCategory.this));
+                    adapter = new PackageAdapter(list3,userCategory.this,"Strength Packages");
                     strength.setAdapter(adapter);
 
                 }
@@ -157,7 +157,7 @@ public class AdminCategory extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(AdminCategory.this,databaseError.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(userCategory.this,databaseError.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -181,8 +181,8 @@ public class AdminCategory extends AppCompatActivity {
                         list4.add(data);
                     }
                     crossfit.setHasFixedSize(true);
-                    crossfit.setLayoutManager(new LinearLayoutManager(AdminCategory.this));
-                    adapter = new PackageAdapter(list4,AdminCategory.this,"Cross-Fit Packages");
+                    crossfit.setLayoutManager(new LinearLayoutManager(userCategory.this));
+                    adapter = new PackageAdapter(list4,userCategory.this,"Cross-Fit Packages");
                     crossfit.setAdapter(adapter);
 
                 }
@@ -190,7 +190,7 @@ public class AdminCategory extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(AdminCategory.this,databaseError.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(userCategory.this,databaseError.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
     }

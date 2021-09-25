@@ -50,10 +50,11 @@
                 android:id="@+id/txtName"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="Packege Name"
+                android:hint="Package Name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="149dp" />
+
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -99,12 +100,12 @@
                 android:id="@+id/txtAvailableDate"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="Available Date"
-                android:inputType="textPostalAddress"
-                android:maxLength="3"
+                android:hint="Available Date(DD-MM-YYYY)"
+                android:inputType="date"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="149dp" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -125,19 +126,21 @@
                 android:id="@+id/txtExpireDate"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="Expire Date"
+                android:hint="Expire Date(DD-MM-YYYY)"
+                android:inputType="text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="149dp" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <Spinner
             android:id="@+id/category"
-            android:layout_width="342dp"
-            android:layout_height="41dp"
-            android:spinnerMode="dropdown"
-            android:layout_marginVertical="16dp"
-            android:gravity="center" />
+            android:layout_width="345dp"
+            android:layout_height="55dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:layout_marginTop="25dp"
+            android:spinnerMode="dropdown"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnAdd"
@@ -150,6 +153,8 @@
             android:textColor="@color/white"
             android:textSize="15dp"
             android:textStyle="bold" />
+
+
 
 
     </LinearLayout>
