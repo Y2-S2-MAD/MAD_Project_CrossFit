@@ -11,11 +11,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="AdminHeader">Admin Panel</string>
 
-    
+    <string name="AddCardioExercise">Add Cardio Exercise</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-=======
+
     <string name="AddFood">Add Food</string>
     <string name="MealName">Meal Name</string>
     <string name="Gram">Gram</string>

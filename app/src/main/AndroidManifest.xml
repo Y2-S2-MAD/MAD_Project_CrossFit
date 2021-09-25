@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.crossfitappv1">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
 <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
@@ -10,14 +14,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CrossFitAppV1">
         <activity
-
+            android:name=".CardioExercisesView"
+            android:exported="true" />
+        <activity
+            android:name=".ExerciseCardioAdd"
+            android:exported="true" />
+        <activity
+            android:name=".AdminExerciseStrength"
+            android:exported="true" />
+        <activity
+            android:name=".AdminExerciseCardio"
+            android:exported="true" />
+        <activity
+            android:name=".AdminExerciseMain"
+            android:exported="true" />
+        <activity
             android:name=".ActivityExerciseMain"
-=======
+            android:exported="true" />
+         <activity        
             android:name=".AdminAddFood"
             android:exported="true" />
         <activity
             android:name=".AdminFoodMain"
-
             android:exported="true" />
         <activity
             android:name=".ActivityFoodMain"

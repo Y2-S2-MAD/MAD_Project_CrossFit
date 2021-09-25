@@ -1,6 +1,5 @@
 package com.example.crossfitappv1;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,7 +30,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_home);
 
         FoodCard = (CardView) findViewById(R.id.food_card);
-        ExerciseCard = (CardView)  findViewById(R.id.exercise_card);
+        ExerciseCard = (CardView)  findViewById(R.id.admin_exercise_card);
 
         FoodCard.setOnClickListener(this);
         ExerciseCard.setOnClickListener(this);
@@ -48,6 +47,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
+
+        navigationView.setCheckedItem(R.id.nav_home);
 
         }
 
@@ -73,7 +74,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 break;
 
-            case R.id.exercise_card:
+            case R.id.admin_exercise_card:
                 i = new Intent(this,ActivityExerciseMain.class);
                 startActivity(i);
                 break;
@@ -98,6 +99,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent2);
 
         }
+
+        drawerLayout.closeDrawer(GravityCompat.START);
 
         return true;
     }
