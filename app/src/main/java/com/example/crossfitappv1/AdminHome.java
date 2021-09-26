@@ -8,6 +8,10 @@ import android.annotation.SuppressLint;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+//comment comment
+public class AdminHome extends AppCompatActivity {
+
 import android.view.View;
 
 public class AdminHome extends AppCompatActivity implements View.OnClickListener {
@@ -17,7 +21,10 @@ public class AdminHome extends AppCompatActivity implements View.OnClickListener
 
     CardView AdminFoodCard;
 
+
     CardView AdminStore;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

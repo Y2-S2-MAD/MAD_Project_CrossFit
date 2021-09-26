@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CrossFitAppV1">
         <activity
+
+            android:name=".AddCategory"
+            android:exported="true" />
+        <activity
+            android:name=".AdminCategory"
+
             android:name=".CardioExercisesView"
             android:exported="true" />
         <activity
@@ -39,6 +45,7 @@
             android:exported="true" />
         <activity
             android:name=".ActivityFoodMain"
+
             android:exported="true" />
         <activity
             android:name=".AdminHome"

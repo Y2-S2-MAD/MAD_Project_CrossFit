@@ -4,6 +4,16 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
+    public CardView card1;
+
+
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -24,10 +34,15 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     NavigationView navigationView;
     Toolbar toolbar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        card1 = (CardView) findViewById(R.id.package_card);
+
+        card1.setOnClickListener(this);
 
         FoodCard = (CardView) findViewById(R.id.food_card);
         ExerciseCard = (CardView)  findViewById(R.id.admin_exercise_card);
@@ -63,10 +78,20 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         else {
             super.onBackPressed();
         }
+
     }
 
     @Override
     public void onClick(View v) {
+
+        Intent i;
+        switch (v.getId()) {
+            case R.id.package_card:
+                i = new Intent(this, AdminCategory.class);
+                startActivity(i);
+                break;
+        }
+
 
         Intent i;
 
@@ -110,5 +135,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         drawerLayout.closeDrawer(GravityCompat.START);
 
         return true;
+
     }
 }
