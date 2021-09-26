@@ -58,7 +58,7 @@ public class MyRecyclerViewAdapter extends FirebaseRecyclerAdapter<ModelFoods,My
             public void onClick(View v) {
                 final DialogPlus dialogPlus = DialogPlus.newDialog(holder.meal.getContext())
                         .setContentHolder(new ViewHolder(R.layout.update_popup))
-                        .setExpanded(true,1628)
+                        .setExpanded(true,1728)
                         .create();
                 View view = dialogPlus.getHolderView();
                 EditText name = view.findViewById(R.id.txtUpdateFoodName);

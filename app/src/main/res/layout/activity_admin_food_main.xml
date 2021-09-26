@@ -16,8 +16,8 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recview"
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
+            android:background="@drawable/colorshading"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
             app:layout_constraintVertical_bias="0.957"
             app:rippleColor="#5AC1D0"
             app:srcCompat="@drawable/ic_add_circle"
-            tools:ignore="VectorDrawableCompat" />
+            tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

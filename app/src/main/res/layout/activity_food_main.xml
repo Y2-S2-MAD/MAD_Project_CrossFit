@@ -15,6 +15,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="250dp"
+            app:srcCompat="@drawable/exercise_add_icon"
+            tools:ignore="VectorDrawableCompat,SpeakableTextPresentCheck" />
     </FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -28,6 +39,8 @@
         app:itemIconTint="@color/tab_item"
         app:itemTextColor="@color/tab_item"
         android:background="@drawable/tab_corners_shape"
-        app:menu="@menu/menu2" />
+        app:menu="@menu/menu2" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
