@@ -18,7 +18,7 @@ import com.google.android.material.navigation.NavigationView;
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
     //comment
-    CardView FoodCard,ExerciseCard;
+    CardView FoodCard,ExerciseCard,StoreCard;
 
     DrawerLayout drawerLayout;
     NavigationView navigationView;
@@ -31,9 +31,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         FoodCard = (CardView) findViewById(R.id.food_card);
         ExerciseCard = (CardView)  findViewById(R.id.admin_exercise_card);
+        StoreCard = (CardView) findViewById(R.id.store_card);
 
         FoodCard.setOnClickListener(this);
         ExerciseCard.setOnClickListener(this);
+        StoreCard.setOnClickListener(this);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
@@ -76,6 +78,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.admin_exercise_card:
                 i = new Intent(this,ActivityExerciseMain.class);
+                startActivity(i);
+                break;
+
+            case R.id.store_card:
+                i = new Intent(this,userStoreCategory.class);
                 startActivity(i);
                 break;
         }
