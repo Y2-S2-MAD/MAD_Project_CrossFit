@@ -59,6 +59,18 @@
         <activity
             android:name=".HomeActivity"
             android:exported="true" />
+        <activity
+            android:name=".AdminStoreCategory"
+            android:exported="true" />
+        <activity
+            android:name=".AddStoreCategory"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateStoreActivity"
+            android:exported="true" />
+        <activity
+            android:name=".userStoreCategory"
+            android:exported="true" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

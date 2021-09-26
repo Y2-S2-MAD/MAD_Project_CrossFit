@@ -22,6 +22,10 @@ public class AdminHome extends AppCompatActivity implements View.OnClickListener
     CardView AdminFoodCard;
 
 
+    CardView AdminStore;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,9 @@ public class AdminHome extends AppCompatActivity implements View.OnClickListener
 
         AdminExercise.setOnClickListener(this);
 
+        AdminStore = (CardView) findViewById(R.id.store_card);
+
+        AdminStore.setOnClickListener(this);
 
     }
 
@@ -46,6 +53,11 @@ public class AdminHome extends AppCompatActivity implements View.OnClickListener
                 startActivity(i);
                 break;
 
+            case R.id.store_card:
+                i = new Intent(this, AdminStoreCategory.class);
+                startActivity(i);
+                break;
+
         }
 
         AdminFoodCard = findViewById(R.id.food_card);
@@ -53,6 +65,8 @@ public class AdminHome extends AppCompatActivity implements View.OnClickListener
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(AdminHome.this,AdminFoodMain.class));
+
+
             }
         });
 
