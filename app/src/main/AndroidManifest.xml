@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+
+
+<uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,11 +29,37 @@
         <activity android:name=".ActivityExerciseMain"
             android:theme="@style/AppTheme.custome"/>
         <activity
+
+            android:name=".AddCategory"
+            android:exported="true" />
+        <activity
+            android:name=".AdminCategory"
+
+            android:name=".CardioExercisesView"
+            android:exported="true" />
+        <activity
+            android:name=".ExerciseCardioAdd"
+            android:exported="true" />
+        <activity
+            android:name=".AdminExerciseStrength"
+            android:exported="true" />
+        <activity
+            android:name=".AdminExerciseCardio"
+            android:exported="true" />
+        <activity
+            android:name=".AdminExerciseMain"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityExerciseMain"
+            android:exported="true" />
+         <activity        
+
             android:name=".AdminAddFood"
             android:exported="true"
             android:theme="@style/AppTheme.custome"/>
         <activity
             android:name=".AdminFoodMain"
+
             android:exported="true"
             android:label="Search"
             />
@@ -37,6 +67,13 @@
             android:name=".ActivityFoodMain"
             android:exported="true"
             android:theme="@style/AppTheme.custome"/>
+
+            android:exported="true" />
+        <activity
+            android:name=".ActivityFoodMain"
+
+            android:exported="true" />
+
         <activity
             android:name=".AdminHome"
             android:exported="true"
@@ -51,10 +88,27 @@
             android:theme="@style/AppTheme.custome"/>
         <activity
             android:name=".HomeActivity"
+
             android:exported="true"
             android:theme="@style/AppTheme.custome"/>
         <activity android:name=".MainActivity"
             android:theme="@style/AppTheme.custome">
+
+
+            android:exported="true" />
+        <activity
+            android:name=".AdminStoreCategory"
+            android:exported="true" />
+        <activity
+            android:name=".AddStoreCategory"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateStoreActivity"
+            android:exported="true" />
+        <activity
+            android:name=".userStoreCategory"
+            android:exported="true" />
+        <activity android:name=".MainActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

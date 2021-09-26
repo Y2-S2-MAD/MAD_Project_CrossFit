@@ -1,5 +1,6 @@
 package com.example.crossfitappv1;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,13 +8,16 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link ExerciseAddFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ExerciseAddFragment extends Fragment {
+public class ExerciseAddFragment<AddCardioExercise> extends Fragment  {
+
+    Button AddCardioExercise;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +63,26 @@ public class ExerciseAddFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_exercise_add, container, false);
+        View view1 = inflater.inflate(R.layout.fragment_exercise_add, container, false);
+
+        AddCardioExercise = (Button)view1.findViewById(R.id.CardioExerciseAdd);
+
+        AddCardioExercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(getActivity(),CardioExercisesView.class);
+                startActivity(myIntent);
+            }
+        });
+
+
+
+        return view1;
+
+
     }
+
+
+
+
 }
