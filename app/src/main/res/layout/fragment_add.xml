@@ -7,6 +7,7 @@
     android:background="@drawable/background"
     tools:context=".FragmentAdd">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -78,4 +79,6 @@
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </FrameLayout>
