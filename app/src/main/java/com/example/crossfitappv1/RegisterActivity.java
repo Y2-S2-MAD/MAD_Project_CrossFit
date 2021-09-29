@@ -5,48 +5,40 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.HashMap;
-import java.util.Map;
+public class RegisterActivity extends AppCompatActivity implements View.OnClickListener{
 
-public class RegisterActivity extends AppCompatActivity {
-
-    EditText fullname,email,password,dob,CurWeight,GoalWeight,height;
+    EditText fullname,email,password,age,CurWeight,GoalWeight,height;
     Button signup;
     TextView Login;
     RadioButton isMale,isFemale;
+    ProgressBar progressBar;
+    private FirebaseAuth mAuth;
     boolean valid;
-    FirebaseAuth fAuth;
-    FirebaseFirestore fStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
-        fAuth = FirebaseAuth.getInstance();
-        fStore = FirebaseFirestore.getInstance();
-
+        mAuth = FirebaseAuth.getInstance();
         fullname = findViewById(R.id.editTxtRegFullName);
         email = findViewById(R.id.editTxtEmail);
         password = findViewById(R.id.editTxtPassword);
-        dob = findViewById(R.id.editTxtDOB);
+        age = findViewById(R.id.editTxtAge);
         CurWeight = findViewById(R.id.etCWeight);
         GoalWeight = findViewById(R.id.etGWeight);
         height = findViewById(R.id.etHeight);
@@ -54,72 +46,99 @@ public class RegisterActivity extends AppCompatActivity {
         isFemale = findViewById(R.id.radioBtnFemale);
         signup = findViewById(R.id.btnSignUp);
         Login = findViewById(R.id.RegToLogin);
-
-        signup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                checkField(fullname);
-                checkField(email);
-                checkField(password);
-                checkField(dob);
-                checkField(CurWeight);
-                checkField(GoalWeight);
-                checkField(height);
-
-                //radiobutton validation
-                if( ! (isMale.isChecked() || isFemale.isChecked())){
-                    Toast.makeText(RegisterActivity.this,"Select the geneder",Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                if (valid){
-
-                    //User Registration process
-                    fAuth.createUserWithEmailAndPassword(email.getText().toString(),password.getText().toString()).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-                        @Override
-                        public void onSuccess(AuthResult authResult) {
-                            FirebaseUser user = fAuth.getCurrentUser();
-                            Toast.makeText(RegisterActivity.this,"Account Created",Toast.LENGTH_SHORT).show();
-                            DocumentReference df = fStore.collection("Users").document(user.getUid());
-                            Map<String,Object> userInfo = new HashMap<>();
-                            userInfo.put("FullName",fullname.getText().toString());
-                            userInfo.put("Email",email.getText().toString());
-                            userInfo.put("dob",dob.getText().toString());
-                            userInfo.put("CurWeight",CurWeight.getText().toString());
-                            userInfo.put("GoalWeight",GoalWeight.getText().toString());
-                            userInfo.put("height",height.getText().toString());
-
-                            if (isMale.isChecked()){
-                                userInfo.put("isMale","1");
-                            }
-                            if (isFemale.isChecked()){
-                                userInfo.put("isFemale","1");
-                            }
-
-                            //specify if the user is admin
-                            userInfo.put("isUser","1");
-
-                            df.set(userInfo);
-
-                            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-                            finish();
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(RegisterActivity.this,"Failed to Create",Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
-            }
-        });
-
+        progressBar = findViewById(R.id.progressbar);
+        signup.setOnClickListener(this);
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),LoginActivity.class));
             }
         });
+    }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btnSignUp:
+                registerUser();
+                break;
+        }
+    }
+    private void registerUser() {
+        String Email = email.getText().toString().trim();
+        String Fullname = fullname.getText().toString().trim();
+        String Password = password.getText().toString().trim();
+        String Age = age.getText().toString().trim();
+        String CurrentWei = CurWeight.getText().toString().trim();
+        String GoalWei = GoalWeight.getText().toString().trim();
+        String Height = height.getText().toString().trim();
+        //float AgeBMR = Float.parseFloat(age.getText().toString().trim());
+        //float HeightBMR = Float.parseFloat(height.getText().toString().trim());
+        //float WeightBMR = Float.parseFloat(CurWeight.getText().toString().trim());
+        String male = isMale.getText().toString().trim();
+        String female = isFemale.getText().toString().trim();
+
+        checkField(fullname);
+        checkField(email);
+        checkField(password);
+        checkField(age);
+        checkField(CurWeight);
+        checkField(GoalWeight);
+        checkField(height);
+
+        //radiobutton validation
+        if( ! (isMale.isChecked() || isFemale.isChecked())){
+            Toast.makeText(RegisterActivity.this,"Select the gender",Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()){
+            email.setError("Please provide valid email");
+            email.requestFocus();
+            return;
+        }
+        if (valid) {
+            progressBar.setVisibility(View.VISIBLE);
+            mAuth.createUserWithEmailAndPassword(Email, Password)
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (task.isSuccessful()) {
+                                Users user = new Users(Fullname, Email, Age, CurrentWei, GoalWei, Height);
+                                if (isMale.isChecked()){
+                                    user.setMale("1");
+                                    //float maleBMR = (float) (66 + ((13.7 * WeightBMR) + (5 * HeightBMR)) - (6.8 * AgeBMR));
+                                    //user.setbmr(String.valueOf(maleBMR));
+                                }
+                                if (isFemale.isChecked()){
+                                    user.setFemale("1");
+                                    //float femaleBMR = (float) (655 + ((9.6 * WeightBMR) + (1.8 * HeightBMR)) - (4.7 * AgeBMR));
+                                    //user.setbmr(String.valueOf(femaleBMR));
+                                }
+                                user.setUser("1");
+                                FirebaseDatabase.getInstance().getReference("Users")
+                                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                        .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()) {
+                                            Toast.makeText(RegisterActivity.this, "Registration Successfully", Toast.LENGTH_SHORT).show();
+                                            progressBar.setVisibility(View.VISIBLE);
+                                            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+                                            finish();
+                                        } else {
+                                            Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                                            progressBar.setVisibility(View.GONE);
+                                        }
+                                    }
+                                });
+                            } else {
+                                Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                                progressBar.setVisibility(View.GONE);
+                            }
+                        }
+                    });
+        }
     }
 
 

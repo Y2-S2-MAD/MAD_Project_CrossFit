@@ -11,34 +11,23 @@
 
     <ImageView
         android:id="@+id/imageViewLogo"
-        android:layout_width="209dp"
-        android:layout_height="199dp"
+        android:layout_width="188dp"
+        android:layout_height="159dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.057"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintVertical_bias="0.133"
+        app:srcCompat="@drawable/loginlogo" />
 
-    <TextView
-        android:id="@+id/RegisterheaderView"
-        android:layout_width="346dp"
-        android:layout_height="102dp"
-        android:text="Cross Fit Gym"
-        android:textColor="@color/white"
-        android:textSize="50dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.787"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.309" />
 
     <EditText
+
         android:id="@+id/editTxtRegFullName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         android:background="@drawable/edit_text_background"
         android:drawableStart="@drawable/ic_email_black"
         android:drawableLeft="@drawable/ic_email_black"
@@ -53,10 +42,11 @@
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.563" />
+
 
     <EditText
         android:id="@+id/editTextLoginPassword"
@@ -68,14 +58,14 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:padding="10dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#808080"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.684" />
@@ -89,7 +79,7 @@
         app:backgroundTint="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.838" />
@@ -105,9 +95,23 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.928" />
+
+    <ProgressBar
+        android:id="@+id/progressbar2"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

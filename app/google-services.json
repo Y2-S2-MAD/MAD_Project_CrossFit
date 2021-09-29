@@ -1,6 +1,11 @@
 {
   "project_info": {
     "project_number": "343274364770",
+
+
+    "firebase_url": "https://cross-fit-app-7b998-default-rtdb.firebaseio.com",
+
+
     "project_id": "cross-fit-app-7b998",
     "storage_bucket": "cross-fit-app-7b998.appspot.com"
   },

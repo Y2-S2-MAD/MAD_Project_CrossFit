@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/ExCname"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Run"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ExCminutes"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:text="15 min"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:layout_toRightOf="@id/ExCname"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/ExCcaloriesBurned"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/ExCminutes"
+            android:text="150 Kcls"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_below="@id/ExCcaloriesBurned"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:layout_marginRight="5dp"
+                android:id="@+id/btnEdit"/>
+
+            <Button
+                android:layout_width="173dp"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/btnDelete"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
