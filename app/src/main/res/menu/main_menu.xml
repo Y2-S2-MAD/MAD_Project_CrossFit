@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_food"
+            android:icon="@drawable/outline_restaurant_black_24dp"
+            android:title="Food" />
+
+        <item
+            android:id="@+id/nav_exercise"
+            android:icon="@drawable/outline_fitness_center_black_24dp"
+            android:title="Exercise" />
+
+        <item
+            android:id="@+id/nav_package"
+            android:icon="@drawable/outline_inventory_black_24dp"
+            android:title="Package" />
+
+        <item
+            android:id="@+id/nav_store"
+            android:icon="@drawable/outline_store_black_24dp"
+            android:title="Store" />
+
+    </group>
+
+
+    <item android:title="Profile">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/user_icon"
+                    android:title="User" />
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/logout_icon"
+                    android:title="Logout" />
+
+            </group>
+
+        </menu>
+
+
+    </item>
+
+
+</menu>

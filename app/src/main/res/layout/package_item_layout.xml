@@ -28,7 +28,8 @@
                     android:layout_height="wrap_content"
                     android:text="special"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:fontFamily="@font/arvo_bold"/>
 
                 <TextView
                     android:id="@+id/packageDescription"
@@ -52,14 +53,16 @@
                     android:layout_height="wrap_content"
                     android:text="22-09-2020"
                     android:textColor="@color/black"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:inputType="numberDecimal"
+                    android:paddingBottom="10dp"/>
 
-                <com.google.android.material.button.MaterialButton
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/packageUpdate"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_width="wrap_content"
+                    android:layout_width="123dp"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="4dp"
+                    android:background="@drawable/shaded_btn"
                     android:text="Update Info" />
 
 

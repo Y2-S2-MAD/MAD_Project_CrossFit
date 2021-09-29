@@ -1,6 +1,7 @@
 package com.example.crossfitappv1;
 
 
+
 public class Users {
     public String fullname,email,dob,CurWeight,GoalWeight,height,male,female,user;
 

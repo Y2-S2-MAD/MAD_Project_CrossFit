@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".AdminHome">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -133,7 +133,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/exercise_card"
+            android:id="@+id/admin_exercise_card"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="10dp"

@@ -3,6 +3,7 @@
     package="com.example.crossfitappv1">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,13 +13,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CrossFitAppV1">
         <activity
-            android:name=".userCategory"
+            android:name=".ProfileActivity"
             android:exported="true" />
         <activity
-            android:name=".userPackageDetails"
+            android:name=".popup_dialog"
             android:exported="true" />
         <activity
-            android:name=".UpdatePackageActivity"
+            android:name=".PackagePayment"
+            android:exported="true" />
+        <activity
+            android:name=".CardioExercisesView"
+            android:exported="true" />
+        <activity
+            android:name=".ExerciseCardioAdd"
+            android:exported="true" />
+        <activity
+            android:name=".AdminExerciseStrength"
+            android:exported="true" />
+        <activity
+            android:name=".AdminExerciseCardio"
+            android:exported="true" />
+        <activity
+            android:name=".AdminExerciseMain"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityExerciseMain"
+            android:exported="true" />
+        <activity
+            android:name=".AdminAddFood"
+            android:exported="true" />
+        <activity
+            android:name=".AdminFoodMain"
             android:exported="true" />
         <activity
             android:name=".ActivityFoodMain"
@@ -39,11 +64,15 @@
             android:name=".AddCategory"
             android:exported="true" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".UpdatePackageActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".userCategory"
+            android:exported="true" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

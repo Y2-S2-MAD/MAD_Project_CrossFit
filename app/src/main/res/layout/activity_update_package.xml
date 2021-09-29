@@ -88,6 +88,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:hint="Available Date(DD-MM-YYYY)"
+            android:inputType="date"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="149dp" />
@@ -113,7 +114,8 @@
             android:id="@+id/txtExpireDate"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:hint="Expire Date(DD-MM-YYYY)"
+            android:hint="Package Price(RS)"
+            android:inputType="numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:layout_editor_absoluteY="149dp" />
@@ -127,23 +129,25 @@
         android:layout_marginTop="24dp"
         android:weightSum="2">
 
-       <com.google.android.material.button.MaterialButton
+       <androidx.appcompat.widget.AppCompatButton
            android:layout_width="0dp"
            android:layout_height="wrap_content"
            android:layout_weight="1"
            android:text="UPDATE"
            android:textAllCaps="false"
            android:layout_marginRight="8dp"
-           android:id="@+id/updatePackageBtn"/>
+           android:id="@+id/updatePackageBtn"
+           android:background="@drawable/shaded_btn"/>
 
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="DELETE"
             android:textAllCaps="false"
             android:layout_marginLeft="8dp"
-            android:id="@+id/deletePackageBtn"/>
+            android:id="@+id/deletePackageBtn"
+            android:background="@drawable/shaded_btn"/>
 
 
     </LinearLayout>

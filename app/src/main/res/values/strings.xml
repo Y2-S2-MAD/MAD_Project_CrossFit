@@ -10,4 +10,28 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="AdminHeader">Admin Panel</string>
+
+    <string name="AddCardioExercise">Add Cardio Exercise</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="AddFood">Add Food</string>
+    <string name="MealName">Meal Name</string>
+    <string name="Gram">Gram</string>
+    <string name="calories">kCal</string>
+    <string name="carbs">g</string>
+    <string name="fat">g</string>
+    <string name="Protein">g</string>
+    <string name="Weight2">Weight</string>
+    <string name="cal">Calories</string>
+    <string name="carb">Carbs</string>
+    <string name="fats">Fat</string>
+    <string name="Protiens">Protien</string>
+    <string name="Add">Add</string>
+    <string name="AddFoodHeader">Add Food</string>
+    <string name="Weight">Weight</string>
+    <string name="Back">Back</string>
+
 </resources>

@@ -24,13 +24,13 @@ import java.util.List;
 
 public class userCategory extends AppCompatActivity {
 
-    FloatingActionButton fab;
+
     private RecyclerView cardio,weight,strength,crossfit;
 
     private LinearLayout CardioNoData,WeightNoData,StrengthNoData,CrossFitNoData;
     private List<categoryData> list1,list2,list3,list4;
 
-    private PackageAdapter adapter;
+    private UserPackageAdapter adapter;
 
     private DatabaseReference reference, dbRef;
 
@@ -57,11 +57,9 @@ public class userCategory extends AppCompatActivity {
         strength();
         crossfit();
 
-        fab = findViewById(R.id.fab);
 
-        fab.setOnClickListener((view) -> {
-            startActivity(new Intent(userCategory.this,AddCategory.class));
-        });
+
+
     }
 
     private void cardio() {
@@ -83,7 +81,7 @@ public class userCategory extends AppCompatActivity {
                     }
                     cardio.setHasFixedSize(true);
                     cardio.setLayoutManager(new LinearLayoutManager(userCategory.this));
-                    adapter = new PackageAdapter(list1,userCategory.this,"Cardio Packages");
+                    adapter = new UserPackageAdapter(list1,userCategory.this,"Cardio Packages");
                     cardio.setAdapter(adapter);
 
                 }
@@ -116,7 +114,7 @@ public class userCategory extends AppCompatActivity {
                     }
                     weight.setHasFixedSize(true);
                     weight.setLayoutManager(new LinearLayoutManager(userCategory.this));
-                    adapter = new PackageAdapter(list2,userCategory.this,"Weight Packages");
+                    adapter = new UserPackageAdapter(list2,userCategory.this,"Weight Packages");
                     weight.setAdapter(adapter);
 
                 }
@@ -149,7 +147,7 @@ public class userCategory extends AppCompatActivity {
                     }
                     strength.setHasFixedSize(true);
                     strength.setLayoutManager(new LinearLayoutManager(userCategory.this));
-                    adapter = new PackageAdapter(list3,userCategory.this,"Strength Packages");
+                    adapter = new UserPackageAdapter(list3,userCategory.this,"Strength Packages");
                     strength.setAdapter(adapter);
 
                 }
@@ -182,7 +180,7 @@ public class userCategory extends AppCompatActivity {
                     }
                     crossfit.setHasFixedSize(true);
                     crossfit.setLayoutManager(new LinearLayoutManager(userCategory.this));
-                    adapter = new PackageAdapter(list4,userCategory.this,"Cross-Fit Packages");
+                    adapter = new UserPackageAdapter(list4,userCategory.this,"Cross-Fit Packages");
                     crossfit.setAdapter(adapter);
 
                 }

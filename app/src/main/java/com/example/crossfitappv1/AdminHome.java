@@ -3,36 +3,61 @@ package com.example.crossfitappv1;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+
+import android.annotation.SuppressLint;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class AdminHome extends AppCompatActivity{
+public class AdminHome extends AppCompatActivity implements View.OnClickListener {
 
-    public CardView card1;
+
+    CardView AdminExercise;
+    CardView AdminPackage;
+    CardView AdminFoodCard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
 
-        card1 = (CardView) findViewById(R.id.package_card);
 
+        AdminExercise = (CardView) findViewById(R.id.admin_exercise_card);
 
-//        card1.setOnClickListener(this);
-        card1.setOnClickListener(new View.OnClickListener() {
+        AdminExercise.setOnClickListener(this);
+
+        AdminPackage = (CardView) findViewById(R.id.package_card);
+
+        AdminPackage.setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+
+        Intent i;
+
+        switch (v.getId()) {
+            case R.id.admin_exercise_card:
+                i = new Intent(this, AdminExerciseMain.class);
+                startActivity(i);
+                break;
+
+            case R.id.package_card:
+                i = new Intent(this, AdminCategory.class);
+                startActivity(i);
+                break;
+
+        }
+
+        AdminFoodCard = findViewById(R.id.food_card);
+        AdminFoodCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                adminCategory();
+                startActivity(new Intent(AdminHome.this,AdminFoodMain.class));
             }
         });
 
     }
-
-    private void adminCategory() {
-        Intent intent = new Intent(this,AdminCategory.class);
-        startActivity(intent);
-    }
-
-
 }

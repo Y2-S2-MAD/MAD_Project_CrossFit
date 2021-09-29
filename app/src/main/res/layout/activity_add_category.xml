@@ -126,8 +126,8 @@
                 android:id="@+id/txtExpireDate"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:hint="Expire Date(DD-MM-YYYY)"
-                android:inputType="text"
+                android:hint="Package price(Rs)"
+                android:inputType="numberDecimal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:layout_editor_absoluteY="149dp" />
