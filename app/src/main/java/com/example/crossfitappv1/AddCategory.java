@@ -1,5 +1,13 @@
 package com.example.crossfitappv1;
 
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+public class AddCategory extends AppCompatActivity {
+
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,10 +36,12 @@ public class AddCategory extends AppCompatActivity {
     private Bitmap bitmap = null;
     private String categoryList;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_category);
+
 
         imageView5 = findViewById(R.id.imageView5);
         txtName = findViewById(R.id.txtName);
@@ -76,5 +86,6 @@ public class AddCategory extends AppCompatActivity {
             }
             imageView5.setImageBitmap(bitmap);
         }
+
     }
 }
