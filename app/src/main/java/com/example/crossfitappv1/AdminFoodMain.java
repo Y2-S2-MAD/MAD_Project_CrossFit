@@ -30,13 +30,11 @@ public class AdminFoodMain extends AppCompatActivity {
     MyRecyclerViewAdapter myAdapter;
 
     FloatingActionButton floatingActionButton;
-
+    //Display foods in recycler view
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_admin_food_main);
-
         recyclerView = (RecyclerView) findViewById(R.id.recview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -55,22 +53,20 @@ public class AdminFoodMain extends AppCompatActivity {
             }
         });
     }
-
     @Override
     protected void onStart() {
         super.onStart();
         myAdapter.startListening();
     }
-
     @Override
     protected void onStop() {
         super.onStop();
         myAdapter.stopListening();
     }
 
+    //Searching Foods in Admin Panel
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         getMenuInflater().inflate(R.menu.search,menu);
         MenuItem item = menu.findItem(R.id.search);
         SearchView searchView = (SearchView) item.getActionView();
@@ -80,7 +76,6 @@ public class AdminFoodMain extends AppCompatActivity {
                 txtSearch(query);
                 return false;
             }
-
             @Override
             public boolean onQueryTextChange(String query) {
                 txtSearch(query);
@@ -89,13 +84,11 @@ public class AdminFoodMain extends AppCompatActivity {
         });
         return super.onCreateOptionsMenu(menu);
     }
-
     private void txtSearch(String str){
         FirebaseRecyclerOptions<ModelFoods> options =
                 new FirebaseRecyclerOptions.Builder<ModelFoods>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("Foods").orderByChild("mealName").startAt(str).endAt(str+"~"),ModelFoods.class)
                         .build();
-
         myAdapter = new MyRecyclerViewAdapter(options);
         myAdapter.startListening();
         recyclerView.setAdapter(myAdapter);

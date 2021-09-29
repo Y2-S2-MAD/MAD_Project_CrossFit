@@ -19,9 +19,9 @@
         <activity
             android:name=".AddFoodCount"
             android:exported="true"
-            android:theme="@style/AppTheme.custome">
+            android:label="Search"/>
 
-        </activity>
+
         <activity android:name=".ActivityExerciseMain"
             android:theme="@style/AppTheme.custome"/>
         <activity

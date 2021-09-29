@@ -19,11 +19,10 @@ public class AdminAddFood extends AppCompatActivity {
     Foods ObFood;
     DatabaseReference dbRef;
 
-    @Override
+    @Override  //Admin Add Food
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_add_food);
-
         Meal = findViewById(R.id.editMealName);
         Weig = findViewById(R.id.gram);
         Cal = findViewById(R.id.editTxtcalories);
@@ -32,7 +31,6 @@ public class AdminAddFood extends AppCompatActivity {
         Protein = findViewById(R.id.edittxtProtein);
         Add = findViewById(R.id.btnAdd);
         ObFood = new Foods();
-
         Back = findViewById(R.id.btnBack);
         Back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,12 +40,9 @@ public class AdminAddFood extends AppCompatActivity {
         });
 
     }
-
     public void AddFood(View view){
         dbRef = FirebaseDatabase.getInstance().getReference().child("Foods");
-
         try{
-
             if (TextUtils.isEmpty(Meal.getText().toString().trim())){
                 Toast.makeText(getApplicationContext(),"Please Enter the Meal Name",Toast.LENGTH_SHORT).show();
             }else if (TextUtils.isEmpty(Weig.getText().toString().trim())){
@@ -61,21 +56,17 @@ public class AdminAddFood extends AppCompatActivity {
             }else if (TextUtils.isEmpty(Protein.getText().toString().trim())){
                 Toast.makeText(getApplicationContext(),"Please Enter the Protien",Toast.LENGTH_SHORT).show();
             }else {
-
                 ObFood.setMealName(Meal.getText().toString().trim());
                 ObFood.setWeight(Weig.getText().toString().trim());
                 ObFood.setCalories(Cal.getText().toString().trim());
                 ObFood.setCarbs(Carbs.getText().toString().trim());
                 ObFood.setFat(Fat.getText().toString().trim());
                 ObFood.setProtien(Protein.getText().toString().trim());
-
                 dbRef.push().setValue(ObFood);
                 Toast.makeText(getApplicationContext(),"Successfully inserted",Toast.LENGTH_SHORT).show();
-
             }
         }catch (NumberFormatException e){
             Toast.makeText(getApplicationContext(),"Number Format Exception",Toast.LENGTH_SHORT).show();
         }
     }
-
 }

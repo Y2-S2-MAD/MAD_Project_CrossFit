@@ -3,7 +3,16 @@ package com.example.crossfitappv1;
 
 
 public class Users {
-    public String fullname,email,dob,CurWeight,GoalWeight,height,male,female,user;
+    public String fullname;
+    public String email;
+    public String dob;
+    public String CurWeight;
+    public String GoalWeight;
+    public String height;
+    public String male;
+    public String female;
+    public String user;
+    public String bmr;
 
     public Users(){
 
@@ -21,7 +30,6 @@ public class Users {
     public String getMale() {
         return male;
     }
-
     public String getFemale() {
         return female;
     }
@@ -31,6 +39,23 @@ public class Users {
     public void setFemale(String female){
         this.female = female;
     }
+
+    public String getbmr() {
+        return bmr;
+    }
+
+    public void setbmr(String bmr) {
+        this.bmr = bmr;
+    }
+
+    /*public String getbmrf() {
+        return bmrf;
+    }*/
+
+    /*public void setbmrf(String bmrf) {
+        this.bmrf = bmrf;
+    }*/
+
     public void setUser(String user){
         this.user = user;
     }

@@ -6,8 +6,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -43,7 +46,6 @@ public class AddFoodCount extends AppCompatActivity {
             }
         });
     }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -56,6 +58,36 @@ public class AddFoodCount extends AppCompatActivity {
         myadapter.stopListening();
     }
 
+
+    //Searching Foods
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.search,menu);
+        MenuItem item = menu.findItem(R.id.search);
+        SearchView searchView = (SearchView) item.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                txtSearch(query);
+                return false;
+            }
+            @Override
+            public boolean onQueryTextChange(String query) {
+                txtSearch(query);
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
+    }
+    private void txtSearch(String str){
+        FirebaseRecyclerOptions<ModelFoods> options =
+                new FirebaseRecyclerOptions.Builder<ModelFoods>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference().child("Foods").orderByChild("mealName").startAt(str).endAt(str+"~"),ModelFoods.class )
+                        .build();
+        myadapter = new MyRecyclerViewAdapter2(options);
+        myadapter.startListening();
+        recyclerView.setAdapter(myadapter);
+    }
 
 
 }

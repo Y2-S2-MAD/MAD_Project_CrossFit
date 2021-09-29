@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CrossFitAppV1</string>
+    <string name="app_name">Cross-Fit</string>
     <string name="RegHeader">Create Account</string>
     <string name="Puls_Mark">+</string>
     <string name="Equal_Mark">=</string>
@@ -36,4 +36,5 @@
 
     <string name="txtview_summary">Today Consumption</string>
     <string name="txtview_calories">790 kCal Consumed</string>
+    <string name="search">Search</string>
 </resources>

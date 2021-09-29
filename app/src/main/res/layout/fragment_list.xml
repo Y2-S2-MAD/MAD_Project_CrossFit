@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FragmentList">
 
-    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="55dp"
         app:cardElevation="8dp"
         app:cardCornerRadius="8dp"
         android:layout_marginLeft="26dp"
@@ -20,16 +19,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:orientation="vertical">
+            android:layout_marginRight="16dp">
+
             <EditText
                 android:id="@+id/editTextDate2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="date" />
+                android:hint="24 Sep 2021"
+                android:inputType="textPersonName"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
+            <Button
+                android:id="@+id/btnAddMeals"
+                android:layout_width="55dp"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:src="@drawable/exercise_add_icon"
+                app:icon="@drawable/ic_find_date"
+                tools:ignore="SpeakableTextPresentCheck" />
         </LinearLayout>
+
+
 
 
     </androidx.cardview.widget.CardView>
@@ -38,13 +50,13 @@
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="175dp"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         app:cardElevation="8dp"
         app:cardCornerRadius="8dp"
         android:layout_marginLeft="26dp"
         android:layout_marginRight="26dp"
-        android:layout_marginTop="55dp">
+        android:layout_marginTop="63dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -84,7 +96,7 @@
                     android:id="@+id/foodListMealName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="FoodNAme"
+                    android:text="Food Name"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -111,7 +123,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -137,7 +149,7 @@
                     android:id="@+id/foodListCalo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -154,7 +166,7 @@
                     android:id="@+id/foodListCarbs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -182,14 +194,14 @@
                     android:id="@+id/foodListFat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fat : "
+                    android:text="Protein : "
                     android:layout_marginLeft="90dp"
                     android:textColor="@color/black"
                     android:textSize="16sp"
@@ -199,7 +211,7 @@
                     android:id="@+id/foodListProtein"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -215,12 +227,11 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         app:cardElevation="8dp"
         app:cardCornerRadius="8dp"
         android:layout_marginLeft="26dp"
         android:layout_marginRight="26dp"
-        android:layout_marginTop="235dp">
+        android:layout_marginTop="240dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -242,7 +253,7 @@
                     android:background="@drawable/rounded"
                     android:gravity="center"
                     android:backgroundTint="@color/purple_500"
-                    android:text="BreakFast"
+                    android:text="Lunch"
                     android:textColor="#795548"
                     android:textSize="20dp" />
 
@@ -260,7 +271,7 @@
                     android:id="@+id/foodList2MealName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="FoodNAme"
+                    android:text="Food Name"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -287,7 +298,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -313,7 +324,7 @@
                     android:id="@+id/foodList2Calo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -325,16 +336,16 @@
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
                 <TextView
-                    android:visibility="visible"
                     android:id="@+id/foodList2Carbs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
-
+                    android:textStyle="bold"
+                    android:visibility="visible" />
 
 
             </LinearLayout>
@@ -358,14 +369,14 @@
                     android:id="@+id/foodList2Fat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fat : "
+                    android:text="Protein : "
                     android:layout_marginLeft="90dp"
                     android:textColor="@color/black"
                     android:textSize="16sp"
@@ -375,7 +386,7 @@
                     android:id="@+id/foodList2Protein"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -391,12 +402,11 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         app:cardElevation="8dp"
         app:cardCornerRadius="8dp"
         android:layout_marginLeft="26dp"
         android:layout_marginRight="26dp"
-        android:layout_marginTop="420dp">
+        android:layout_marginTop="415dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -418,7 +428,7 @@
                     android:background="@drawable/rounded"
                     android:gravity="center"
                     android:backgroundTint="@color/purple_500"
-                    android:text="BreakFast"
+                    android:text="Dinner"
                     android:textColor="#795548"
                     android:textSize="20dp" />
 
@@ -436,7 +446,7 @@
                     android:id="@+id/foodList3MealName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="FoodNAme"
+                    android:text="Food Name"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -463,7 +473,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -489,7 +499,7 @@
                     android:id="@+id/foodList3Calo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -506,7 +516,7 @@
                     android:id="@+id/foodList3Carbs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -529,19 +539,21 @@
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
                 <TextView
-                    android:visibility="visible"
                     android:id="@+id/foodList3Fat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fat : "
+                    android:text="Protein : "
                     android:layout_marginLeft="90dp"
                     android:textColor="@color/black"
                     android:textSize="16sp"
@@ -551,7 +563,7 @@
                     android:id="@+id/foodList3Protein"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="150"
+                    android:text="00"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />

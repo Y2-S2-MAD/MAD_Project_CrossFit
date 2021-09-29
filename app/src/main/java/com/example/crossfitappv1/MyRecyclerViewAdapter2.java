@@ -94,8 +94,6 @@ public class MyRecyclerViewAdapter2 extends FirebaseRecyclerAdapter<ModelFoods,M
                         map.put("carbs",carbs.getText().toString());
                         map.put("fat",fat.getText().toString());
                         map.put("protien",protein.getText().toString());
-                        //map.put("count",count.getText().toString());
-
                         Calendar calendar = Calendar.getInstance();
                         String currDate = DateFormat.getDateInstance().format(calendar.getTime());
                         FirebaseDatabase.getInstance().getReference().child("FoodsConsumption")
