@@ -54,18 +54,15 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 String Email = email.getText().toString().trim();
                 String Password = password.getText().toString().trim();
                 checkField(email);
                 checkField(password);
-
                 if (!Patterns.EMAIL_ADDRESS.matcher(Email).matches()){
                     email.setError("Please provide valid email");
                     email.requestFocus();
                     return;
                 }
-
                 if (valid) {
                     progressBar2.setVisibility(View.VISIBLE);
                     mAuth.signInWithEmailAndPassword(Email,Password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {

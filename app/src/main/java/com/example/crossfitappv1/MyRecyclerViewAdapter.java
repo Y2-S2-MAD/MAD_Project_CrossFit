@@ -53,6 +53,7 @@ public class MyRecyclerViewAdapter extends FirebaseRecyclerAdapter<ModelFoods,My
         holder.fat.setText(model.getFat());
         holder.pro.setText(model.getProtien());
 
+        //Update Food in Admin Panel
         holder.btnedit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -67,7 +68,6 @@ public class MyRecyclerViewAdapter extends FirebaseRecyclerAdapter<ModelFoods,My
                 EditText carbs = view.findViewById(R.id.txtUpdateCarbs);
                 EditText fat = view.findViewById(R.id.txtUpdateFat);
                 EditText protein = view.findViewById(R.id.txtUpdateProtien);
-
                 Button btnUp = view.findViewById(R.id.btnUpdate);
                 name.setText(model.getMealName());
                 weight.setText(model.getWeight());
@@ -75,9 +75,7 @@ public class MyRecyclerViewAdapter extends FirebaseRecyclerAdapter<ModelFoods,My
                 carbs.setText(model.getCarbs());
                 fat.setText(model.getFat());
                 protein.setText(model.getProtien());
-
                 dialogPlus.show();
-
                 btnUp.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -88,7 +86,6 @@ public class MyRecyclerViewAdapter extends FirebaseRecyclerAdapter<ModelFoods,My
                         map.put("carbs",carbs.getText().toString());
                         map.put("fat",fat.getText().toString());
                         map.put("protien",protein.getText().toString());
-
                         FirebaseDatabase.getInstance().getReference().child("Foods")
                                 .child(getRef(position).getKey()).updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -110,13 +107,13 @@ public class MyRecyclerViewAdapter extends FirebaseRecyclerAdapter<ModelFoods,My
             }
         });
 
+        //Delete Food in Admin Panel
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(holder.meal.getContext());
                 builder.setTitle("Need to delete ?");
                 builder.setMessage("Deleted data can't be Undo");
-
                 builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -124,7 +121,6 @@ public class MyRecyclerViewAdapter extends FirebaseRecyclerAdapter<ModelFoods,My
                                 .child(getRef(position).getKey()).removeValue();
                     }
                 });
-
                 builder.setNegativeButton("Cancle", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -134,7 +130,6 @@ public class MyRecyclerViewAdapter extends FirebaseRecyclerAdapter<ModelFoods,My
                 builder.show();
             }
         });
-
     }
 
     @NonNull
