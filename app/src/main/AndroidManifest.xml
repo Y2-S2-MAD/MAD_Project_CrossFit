@@ -103,7 +103,7 @@
             android:theme="@style/AppTheme.custome"/>
         
         <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme.custome">
+            android:theme="@style/AppTheme.custome"
             android:exported="true" />
             
         <activity
