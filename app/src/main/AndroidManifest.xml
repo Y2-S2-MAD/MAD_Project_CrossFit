@@ -40,8 +40,6 @@
             android:name=".AddCategory"
             android:exported="true" />
         <activity
-            android:name=".AdminCategory"
-
             android:name=".CardioExercisesView"
             android:exported="true" />
         <activity
